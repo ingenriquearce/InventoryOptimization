@@ -4,7 +4,7 @@ from google.cloud import ai
 import os
 
 # Configuración para el modelo Gemini (de Google AI)
-key_path = "C:\\Users\\Enrique\\Downloads\\InventoryOpt_Project\\inventoryoptimization-455112-946c0b30b97c.json"
+key_path = "C:\\Users\\Enrique\\Documents\\Proyectos\\inventoryoptimization-455112-946c0b30b97c.json"
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
 client = ai.GeminiClient()
 

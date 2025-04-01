@@ -7,8 +7,7 @@ import random
 
 # 📌 **Autenticación**
 # Ruta al archivo JSON de las credenciales de servicio
-key_path = "C:\\Users\\Enrique\\Downloads\\InventoryOpt_Project\\inventoryoptimization-455112-946c0b30b97c.json"
-
+key_path = "C:\\Users\\Enrique\\Documents\\Proyectos\\inventoryoptimization-455112-946c0b30b97c.json"
 
 # Configura las credenciales para Google Cloud
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
