@@ -7,15 +7,21 @@ import random
 
 # 📌 **Autenticación**
 # Ruta al archivo JSON de las credenciales de servicio
-key_path = "C:\\Users\\Enrique\\Documents\\Proyectos\\inventoryoptimization-455112-946c0b30b97c.json"
+#key_path = "C:\\Users\\Enrique\\Documents\\Proyectos\\inventoryoptimization-455112-946c0b30b97c.json"
 
 # Configura las credenciales para Google Cloud
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
 
 # Verificar la autenticación
-credentials = service_account.Credentials.from_service_account_file(key_path)
-print("Autenticado correctamente como:", credentials.service_account_email)
+#credentials = service_account.Credentials.from_service_account_file(key_path)
+#print("Autenticado correctamente como:", credentials.service_account_email)
 
+
+# Cargar credenciales desde Streamlit Secrets
+service_account_info = json.loads(st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"])
+credentials = service_account.Credentials.from_service_account_info(service_account_info)
+
+print("Autenticado correctamente como:", credentials.service_account_email)
 
 # Configuración
 PROJECT_ID = "inventoryoptimization-455112"
